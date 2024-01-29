@@ -22,8 +22,10 @@ En el contexto del desarrollo de este proyecto, se tomó la decisión estratégi
 - MongoDB
 
 ✍️ Autores
-Oscar Albuja - Trabajo Inicial - bezKoder
-[Documentacion del Proceso de reconstruccion y desarrollo PDF]([ruta-al-archivo.pdf](https://github.com/OAlbuja/ProyectoFinalMongoDB/blob/master/Albuja%20Proyecto%20Final%20No%20SQL%20Conexi%C3%B3n%20%20a%20Mongo%20DB.pdf))
+- Oscar Albuja - Trabajo Inicial - bezKoder
+- [Albuja Proyecto Final No SQL Conexión  a Mongo DB.pdf](https://github.com/OAlbuja/ProyectoFinalMongoDB/blob/master/Albuja%20Proyecto%20Final%20No%20SQL%20Conexi%C3%B3n%20%20a%20Mongo%20DB.pdf)
+
+
 
 
 ### 🚀 Instalación
