@@ -29,7 +29,7 @@ Oscar Albuja - Trabajo Inicial - bezKoder
 Clonar el repositorio e instalar dependencias.
 
 ```bash
-git clone [url-del-repositorio]
+git clone [[url-del-repositorio]](https://github.com/bezkoder/spring-boot-mongodb-angular-15.git)
 # Instalar dependencias del frontend
 cd angular-frontend
 npm install
