@@ -1,0 +1,65 @@
+<div class="container mt-4 container-md d-flex flex-column justify-content-center align-items-center">
+  <h4>Add Socio</h4>
+  <div class="card submit-form">
+    <div class="card-body">
+      <div class="submit-form">
+        <div *ngIf="!submitted">
+          <!-- Campos ADD -->
+
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required [(ngModel)]="tutorial.nombre" name="nombre" />
+          </div>
+
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" class="form-control" id="apellido" required [(ngModel)]="tutorial.apellido"
+              name="apellido" />
+          </div>
+
+          <div class="form-group">
+            <label for="cedula">Cédula</label>
+            <input type="text" class="form-control" id="cedula" required [(ngModel)]="tutorial.cedula" name="cedula" />
+          </div>
+
+          <div class="form-group">
+            <label for="tipoDeLicencia">Tipo de Licencia</label>
+            <input type="text" class="form-control" id="tipoDeLicencia" required [(ngModel)]="tutorial.tipoDeLicencia"
+              name="tipoDeLicencia" />
+          </div>
+
+          <!-- Campos para la dirección -->
+          <div class="form-group">
+            <label>Dirección</label>
+            <div class="form-group">
+              <label for="sector">Sector</label>
+              <input type="text" class="form-control" id="sector" [(ngModel)]="tutorial.direccion.sector"
+                name="sector" />
+            </div>
+            <div class="form-group">
+              <label for="callePrincipal">Calle Principal</label>
+              <input type="text" class="form-control" id="callePrincipal" [(ngModel)]="tutorial.direccion.callePrincipal"
+                name="callePrincipal" />
+            </div>
+            <div class="form-group">
+              <label for="calleSecundaria">Calle Secundaria</label>
+              <input type="text" class="form-control" id="calleSecundaria" [(ngModel)]="tutorial.direccion.calleSecundaria"
+                name="calleSecundaria" />
+            </div>
+            <div class="form-group">
+              <label for="numero">Numero</label>
+              <input type="text" class="form-control" id="numero" [(ngModel)]="tutorial.direccion.numero"
+                name="numero" />
+            </div>
+
+            <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+          </div>
+
+          <div *ngIf="submitted">
+            <h4>Tutorial was submitted successfully!</h4>
+            <button class="btn btn-success" (click)="newTutorial()">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

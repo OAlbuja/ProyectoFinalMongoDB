@@ -1,0 +1,94 @@
+<div *ngIf="viewMode; else editable">
+  <div *ngIf="currentTutorial.id">
+    <h4>Socio Taxista</h4>
+    <div>
+      <label><strong>Nombre:</strong></label> {{ currentTutorial.nombre }}
+    </div>
+    <div>
+      <label><strong>Apellido:</strong></label> {{ currentTutorial.apellido }}
+    </div>
+    <div>
+      <label><strong>Cedula:</strong></label> {{ currentTutorial.cedula }}
+    </div>
+    <div>
+      <label><strong>Tipo de Licencia:</strong></label> {{ currentTutorial.tipoDeLicencia }}
+    </div>
+    <div>
+      <label><strong>Dirección:</strong></label>
+      <div style="margin-left: 20px;">
+        <div><label><strong>Sector:</strong></label> {{ currentTutorial.direccion.sector }}</div>
+        <div><label><strong>Calle Principal:</strong></label> {{ currentTutorial.direccion.callePrincipal }}</div>
+        <div><label><strong>Calle Secundaria:</strong></label> {{ currentTutorial.direccion.calleSecundaria }}</div>
+        <div><label><strong>Número:</strong></label> {{ currentTutorial.direccion.numero }}</div>
+      </div>
+    </div>
+    <!-- Agrega más campos según sea necesario -->
+    <div>
+      <label><strong>Status:</strong></label>
+      {{ currentTutorial.published ? "Busy" : "Free" }}
+    </div>
+    <button class="btn btn-warning" routerLink="/tutorials/{{ currentTutorial.id }}">
+      Edit
+    </button>
+  </div>
+
+  <div *ngIf="!currentTutorial">
+    <br />
+    <p>Please click on a Socio Taxista...</p>
+  </div>
+</div>
+
+<ng-template #editable>
+  <div *ngIf="currentTutorial.id" class="edit-form">
+    <h4>Configuration "Socio"</h4>
+    <form>
+      <div class="container mt-4 container-md">
+        <div class="card submit-form">
+          <div class="card-body">
+            <div class="submit-form">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" [(ngModel)]="currentTutorial.nombre" name="nombre" />
+              </div>
+              <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" id="apellido" [(ngModel)]="currentTutorial.apellido" name="apellido" />
+              </div>
+              <div class="form-group">
+                <label for="cedula">Cedula</label>
+                <input type="text" class="form-control" id="cedula" [(ngModel)]="currentTutorial.cedula" name="cedula" />
+              </div>
+              <div class="form-group">
+                <label for="tipoDeLicencia">Tipo de licencia</label>
+                <input type="text" class="form-control" id="tipoDeLicencia" [(ngModel)]="currentTutorial.tipoDeLicencia" name="tipoDeLicencia" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label><strong>Status:</strong></label>
+          {{ currentTutorial.published ? "Busy" : "Free" }}
+        </div>
+      </div>
+      <button class="btn btn-primary mr-2" *ngIf="currentTutorial.published" (click)="updatePublished(false)">
+        UnPublish
+      </button>
+      <button class="btn btn-success mr-2" *ngIf="!currentTutorial.published" (click)="updatePublished(true)">
+        Publish
+      </button>
+      <button class="btn btn-danger mr-2" (click)="deleteTutorial()">
+        Delete
+      </button>
+      <button type="submit" class="btn btn-success mb-2" (click)="updateTutorial()">
+        Update
+      </button>
+    </form>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentTutorial.id">
+    <br />
+    <p>Cannot access this Tutorial...</p>
+  </div>
+</ng-template>

@@ -1,0 +1,29 @@
+.navbar-custom .navbar-collapse {
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .navbar-custom .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(240%);
+    color: white;
+  }
+  .navbar-custom .navbar-collapse {
+    transform: translateX(-30%);
+    color: white;
+    flex-basis: auto;
+  }
+}
+
+/* Estilos adicionales para el color del texto y otros ajustes que prefieras */
+.navbar-custom .nav-link {
+  color: white; /* Esto cambiará el color del texto a blanco */
+
+}
+
+.navbar-custom .nav-link:active,
+.navbar-custom .nav-link:focus,
+.navbar-custom .nav-link:hover {
+  color: white; /* Mantiene el color blanco en todos los estados */
+}

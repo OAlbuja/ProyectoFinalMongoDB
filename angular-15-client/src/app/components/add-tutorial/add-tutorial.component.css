@@ -1,0 +1,13 @@
+.submit-form {
+  max-width: 300px;
+  margin: auto;
+}
+
+.container {
+  padding-top: 1rem;
+}
+
+.submit-form {
+  max-width: 600px; /* Ajusta a tu ancho deseado */
+  margin: auto; /* Esto centrará el formulario en la página */
+}

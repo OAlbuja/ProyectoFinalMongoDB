@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBootDataMongodbApplication<spring-boot-data-mongodb>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.bezkoder.spring.data.mongodb.SpringBootDataMongodbApplication",
+            "projectName": "spring-boot-data-mongodb",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
