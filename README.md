@@ -1,8 +1,10 @@
-# 🚕 Project Coop-Taxi 🚕
+# 🚕 Final Project Coop-Taxi MongoDB🚕
 
 ## 📖 Descripción
 
 Project Coop-Taxi es una aplicación web diseñada para facilitar la gestión de socios taxistas, integrando una interfaz de usuario reactiva con un backend robusto para la gestión eficiente de la información.
+
+En el contexto del desarrollo de este proyecto, se tomó la decisión estratégica de reciclar y adaptar un proyecto previo. Esto se hizo con el fin de optimizar el tiempo y recursos disponibles, dada la complejidad inherente a la creación de una aplicación con un Backend en Spring Boot y un Frontend en Angular.
 
 ## 💻 Tecnologías Utilizadas
 
@@ -19,6 +21,9 @@ Project Coop-Taxi es una aplicación web diseñada para facilitar la gestión de
 - Node.js y npm
 - MongoDB
 
+✍️ Autores
+Oscar Albuja - Trabajo Inicial - bezKoder
+
 ### 🚀 Instalación
 
 Clonar el repositorio e instalar dependencias.
@@ -28,6 +33,9 @@ git clone [url-del-repositorio]
 # Instalar dependencias del frontend
 cd angular-frontend
 npm install
+ng serve --port 8081
 # Instalar dependencias del backend
 cd ../spring-boot-backend
-mvn install
+mvn spring-boot:run
+
+
